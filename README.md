@@ -5,10 +5,10 @@ This is my hackathon submission for a MLH vacation-themed hackathon. Summer Jams
 On uploading a picture, a request is sent to the Google’s Vision API, which detects objects in the image such as birds. These labels are then used with a dataset containing sounds of the corresponding labels. Finally, an audio file is generated accompanying relaxing music and sounds of elements present in the picture.
 
 # Technical Details
-Flask micro-framework
-HTML, CSS and JS
-Google’s Vision API to find labels in the image
-PyDub, a python music library to create the audio files.
+- Flask micro-framework
+- HTML, CSS and JS
+- Google’s Vision API to find labels in the image
+- PyDub, a python music library to create the audio files.
 
 # Trivia
 This was my first hackathon experience and Summer Jams won the first place overall amongst approximately 65 project submissions and 280 participants.
