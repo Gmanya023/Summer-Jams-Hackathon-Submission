@@ -1,0 +1,58 @@
+body {
+    margin: 0px;
+    font-family: 'MuseoModerno', cursive;
+    --nav-height: 50px;
+    --nav-color: #FFE45E;
+}
+
+.navbar {
+    height: var(--nav-height);
+    background-color: var(--nav-color);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+  }
+
+#bg {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#disc {
+    width: 300px;
+    height: auto;
+    transform-origin: 50% 50%;
+    animation: 2s rotateRight infinite linear;
+}
+
+@keyframes rotateRight {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#player {
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    /* background-size: contain; */
+    border-radius: 50px;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#return {
+    margin-top: 30px;
+    width: 600px;
+    border-radius: 50px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='input.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <title>Summer Jams</title>
+
+    <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+  
+    
+  </head>
+  <body>
+    <nav class="navbar sticky-top">SUMMER JAMS</nav>
+    <main role="main" class="">
+      <section id="section-one" class="section">
+        <img id="logo" src="{{ url_for('static', filename='graphics/logo.gif')}}" alt="Summer Jams Logo">
+        <img id="catchline" src="{{ url_for('static', filename='graphics/caption.png')}}" alt="Music that brings your travel plans home">
+        <a class="fa fa-chevron-circle-down arrow down" href="#section-two"></a>
+      </section>
+      <section id="section-two" class="section">
+        <a class="fa fa-chevron-circle-up arrow up" href="#section-one"></a>
+
+          <form class="div-flex" action="{{ url_for('play') }}" method="POST" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+
+
+            {{ form.upload(type="file", id="file", class="inputfile") }}
+            <label id="upload-label" for="file"><span></span> <strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> Choose a file&hellip;</strong></label>
+
+            <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+              {% for choice in form.base %}
+                {% if loop.index == 1 %}
+                  <label class="btn btn-dark btn-outline-light active w-100">
+                    {{ choice(autocomplete="off", checked="checked") }} {{ choice.label }}
+                  </label>    
+                {% else %}
+                  <label class="btn btn-dark btn-outline-light w-100">
+                    {{ choice(autocomplete="off") }} {{ choice.label }}
+                  </label>   
+                {% endif %}          
+              {% endfor %}
+            </div>
+
+            <div class="form-group">
+              {{ form.submit(class="sbtn btn btn-outline-light") }}
+            </div>
+          </form>
+
+        <a class="fa fa-chevron-circle-down arrow down" href="#section-three"></a>
+      </section>
+
+      <section id="section-three" class="section">
+        <a class="fa fa-chevron-circle-up arrow up" href="#section-two"></a>
+        <img id="" src="{{ url_for('static', filename='graphics/created_by.png')}}" alt="Created By">
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='input.js') }}"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

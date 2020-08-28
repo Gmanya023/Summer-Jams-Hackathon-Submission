@@ -1,0 +1,83 @@
+* {
+  font-family: 'MuseoModerno', cursive;
+}
+html {
+  scroll-behavior: smooth;
+  --nav-height: 50px;
+  --nav-color: #FFE45E;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar {
+  height: var(--nav-height);
+  background-color: var(--nav-color);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.section {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid var(--nav-color);
+}
+
+
+.arrow {
+  color: var(--nav-color);
+  font-size: 70px;
+  position: absolute; 
+}
+
+.arrow:hover {
+  text-decoration: none;
+  color: white;
+}
+
+#section-one > .down {
+  top: calc(100vh * 0.9);
+}
+
+#section-two > .down {
+  top: calc(100vh + (100vh * 0.9));
+}
+
+#section-two > .up {
+  margin-top: calc(var(--nav-height)*2);
+  top: calc(100vh + (100vh * 0.05));
+}
+
+#section-three > .up {
+  margin-top: calc(var(--nav-height)*2);
+  top: calc(200vh + (100vh * 0.05));
+}
+
+#catchline {
+  position: relative;
+  top: -50px;
+}
+
+.div-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+  height: 60%;
+}
+
+.sbtn {
+  font-size: 25px;
+}
