@@ -1,8 +1,8 @@
 # Summer-Jams-Hackathon-Submission
-This is my hackathon submission for a MLH vacation-themed hackathon. Summer Jams provides a user with a relaxing getaway during the Covid-19 lockdown by simulating the experience of being on a holiday. It does this by bringing your pictures to life by audifying them.
+This is my hackathon submission for a MLH vacation-themed hackathon. Summer Jams provides users with a relaxing getaway during the Covid-19 lockdown by simulating the experience of being on a holiday. It does this by bringing your pictures to life by audifying them.
 
 # How it works?
-On uploading a picture, a request is sent to the Google’s Vision API, which detects objects in the image such as birds. These labels are then used with a dataset containing sounds of the corresponding labels. Finally, an audio file is generated accompanying relaxing music and sounds of elements present in the picture.
+On uploading a picture, a request is sent to the Google’s Vision API, which detects objects in the image. These labels are then used with a dataset containing sounds of the corresponding labels. Finally, an audio file is generated accompanying relaxing music and sounds of elements present in the picture.
 
 # Technical Details
 - Flask micro-framework
