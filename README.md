@@ -10,8 +10,8 @@ On uploading a picture, a request is sent to the Google’s Vision API, which de
 - Google’s Vision API to find labels in the image
 - PyDub, a python music library to create the audio files.
 
-# Know a little more
-This was my first hackathon experience and to my suprise, Summer Jams won the first place overall amongst approximately 65 project submissions and 280 participants.
+# Trivia
+This was my first hackathon experience and Summer Jams won the first place overall amongst approximately 65 project submissions and 280 participants.
 
 # Demo 
-Find out more about Summer Jams and watch the project demo on our [Devpost submission](https://devpost.com/software/summerjams)
+Find out more about Summer Jams and watch the project demo on [Devpost](https://devpost.com/software/summerjams)
